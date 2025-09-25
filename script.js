@@ -38,34 +38,54 @@ function renderTask(listaTarefas){
         
         let novaTarefa = document.createElement("li") // cria um elemento com a tag il
         novaTarefa.textContent = tarefas[i]
-        let novoId = "tarefa-" + i + "-" + Date.now()
-        novaTarefa.id = novoId
+        
+        let botaoRemover = document.createElement("button")
+        botaoRemover.className = "remover"
+        botaoRemover.textContent = "Excluir"
+
+        let botaoEditar = document.createElement("button")
+        botaoEditar.className = "editar"
+        botaoEditar.textContent = "Alterar"
+        
+        novaTarefa.appendChild(botaoRemover)
+        novaTarefa.appendChild(botaoEditar)
         listaTarefas.appendChild(novaTarefa) // adiciona o il a ul
-        clickCheck(novaTarefa)
+        clickCheck(botaoRemover,botaoEditar, i)
     }
     
 }
 
-function clickCheck(novaTarefa){
+function clickCheck(botaoRemover,botaoEditar,i){
     
-    novaTarefa.addEventListener("click", function() {
+    botaoRemover.addEventListener("click", function() {
         // Chama a função que você quer executar ao clicar, passando o ID
-        dismissTask(this.id);
+        dismissTask(i);
+    });
+    
+    botaoEditar.addEventListener("click", function() {
+        // Chama a função que você quer executar ao clicar, passando o ID
+        editTask(i);
     });
 }
-function dismissTask(taskId){
+function dismissTask(taskIndex){
     
     const mensagemContent = document.getElementById("mensagem")
     mensagemContent.style.backgroundColor = "#c2f3ce"
     mensagemContent.style.color = "#28A745"
     
     let mensagem = "Tarefa removida com sucesso!"
-    let listaTarefas = document.getElementById("listaTarefas")
+    tarefas.splice(taskIndex,1)
+    mensagemContent.textContent = mensagem  
 
-    // usa o ID para remover o item da lista
-    let dismissedTask = document.getElementById(taskId);
-    if (dismissedTask) {
-        listaTarefas.removeChild(dismissedTask);
-        mensagemContent.textContent = mensagem;
-    }
+    let listaTarefas = document.getElementById("listaTarefas")
+    renderTask(listaTarefas)
+}
+function editTask(taskIndex){
+    
+    let editedTask = prompt("Edite a tarefa")
+    tarefas[taskIndex] = editedTask
+
+    let listaTarefas = document.getElementById("listaTarefas")
+    renderTask(listaTarefas)
+    
 }
