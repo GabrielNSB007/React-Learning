@@ -1,3 +1,12 @@
+:root{
+    --main-color: rgb(231, 78, 31);
+    --secondary-color: rgb(63, 56, 56);
+    --background-color: rgb(240, 240, 240);
+    --border-radius: 16px;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --font-type: Arial, Helvetica, sans-serif;
+
+}
 body{
     background-image: url("images/6325313.jpg");
     background-size: cover;
@@ -11,9 +20,14 @@ body{
 }
 
 .infobox{
+    width: 80vw;
+    height: 80vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 
 }
 
@@ -22,7 +36,7 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     align-self: flex-start;
     border-color:black;
     border-width: 4px;
@@ -31,12 +45,12 @@ body{
 }
 
 .chatterbox{
-    width: 70%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content:space-around;
     text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-type);
     color: rgb(63, 56, 56);
     margin-bottom: 20px;
 }
@@ -52,9 +66,30 @@ body{
     width: auto;
     height: 20px;
     border-radius: 16px;
-    border-color: rgb(231, 78, 31);
+    border-color: var(--main-color);
     border-style: solid;
     border-width: 2px;
-    color: rgb(231, 78, 31);
-    padding: 5px;
+    color: var(--main-color);
+    padding: 10px;
+}
+
+.box{
+    width: 100%;
+    font-family: var(--font-type);
+    color: var(--secondary-color);
+}
+
+h1,h2,h3{
+    color: var(--main-color);
+    text-align: left;
+}
+
+#college-time{
+    padding: 10px;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+#college-name{
+    font-style: italic;
 }
