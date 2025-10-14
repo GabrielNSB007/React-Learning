@@ -1,0 +1,31 @@
+body{
+    background-image: url("images/teste.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.infobox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.chatterbox{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+#about-me a:link {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
