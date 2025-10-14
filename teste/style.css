@@ -1,5 +1,5 @@
 body{
-    background-image: url("images/teste.jpg");
+    background-image: url("images/6325313.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,15 +17,44 @@ body{
 
 }
 
-.chatterbox{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+.space{
+    width: 33vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    border-color:black;
+    border-width: 4px;
+    border-style: solid;
+    flex-direction: column;
 }
 
-#about-me a:link {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
+.chatterbox{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content:space-around;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(63, 56, 56);
+    margin-bottom: 20px;
+}
+
+.qualifications{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+.qualifications-bubbles{
+    width: auto;
+    height: 20px;
+    border-radius: 16px;
+    border-color: rgb(231, 78, 31);
+    border-style: solid;
+    border-width: 2px;
+    color: rgb(231, 78, 31);
+    padding: 5px;
 }
