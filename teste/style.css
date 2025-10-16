@@ -5,7 +5,7 @@
     --border-radius: 16px;
     --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     --font-type: Arial, Helvetica, sans-serif;
-
+    
 }
 body{
     background-image: url("images/6325313.jpg");
@@ -28,20 +28,36 @@ body{
     background-color: white;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-
+    
 }
 
 .space{
     width: 33vw;
     height: 100vh;
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: stretch;
     align-self: flex-start;
-    border-color:black;
+    /*border-color:black;
     border-width: 4px;
-    border-style: solid;
+    border-style: solid;*/
     flex-direction: column;
+}
+.box {
+    width: 100%;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+#topbox {
+    margin-top: 0;
+}
+
+#bottombox {
+    margin-bottom: auto;
 }
 
 .chatterbox{
@@ -57,7 +73,7 @@ body{
 
 .qualifications{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 40px;
@@ -74,7 +90,8 @@ body{
 }
 
 .box{
-    width: 100%;
+    width: 90%;
+    height: auto;
     font-family: var(--font-type);
     color: var(--secondary-color);
 }
@@ -92,4 +109,24 @@ h1,h2,h3{
 
 #college-name{
     font-style: italic;
+}
+#topbox{
+    top: 0;
+}
+#leftspace,#middlespace {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#qualifications-box{
+    padding: 10px;
+}
+#eu {
+    display: flex;
+    margin: 0 auto 20px auto;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
 }
